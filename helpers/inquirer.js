@@ -94,7 +94,12 @@ const inquirerMenu = async () => {
         value: tareas.id,
         name: `${idx} ${tareas.desc}`
       }
-    })
+    });
+
+    choices.unshift({
+      value: '0',
+      name: '0'.white + 'Cacelar'
+    });
 
     const preguntas = [
       {

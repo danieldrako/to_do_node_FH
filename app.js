@@ -51,10 +51,12 @@ const main = async () => {
     
       case '6': //Borrar
         const id = await listadoTareasBorrar( tareas.listadoArr);
-        const ok = await confirmar('¿Estás seguro?')
-        if (ok){
-          tareas.borrarTarea(id);
-          console.log('Tarea borrada')
+        if ( id !== '0'){
+          const ok = await confirmar('¿Estás seguro?')
+          if (ok){
+            tareas.borrarTarea(id);
+            console.log('Tarea borrada')
+            }
         }
       break;
     }
